@@ -13,6 +13,10 @@ public class DepartamentoService {
     @Autowired
     private DepartamentoRepository departamentoRepository;
 
+    public DepartamentoService(DepartamentoRepository departamentoRepository) {
+        this.departamentoRepository = departamentoRepository;
+    }
+
     public List<DepartamentoModel> listar(){
         return departamentoRepository.findAll();
     }
