@@ -15,6 +15,9 @@ public class DepartamentoController {
     @Autowired
     private DepartamentoService departamentoService;
 
+    public DepartamentoController(DepartamentoService departamentoService) {
+        this.departamentoService = departamentoService;
+    }
 
     @GetMapping
     public List<DepartamentoModel> Listar(){
